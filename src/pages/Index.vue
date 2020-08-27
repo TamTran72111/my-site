@@ -1,9 +1,26 @@
 <template>
-  <Layout></Layout>
+  <Layout>
+    <About />
+    <Skills />
+    <Experience />
+    <Education />
+  </Layout>
 </template>
 
 <script>
-export default {};
+import About from "@/components/About";
+import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
+import Education from "@/components/Education";
+
+export default {
+  components: {
+    About,
+    Skills,
+    Experience,
+    Education,
+  },
+};
 </script>
 
 <style>

@@ -1,4 +1,18 @@
-<template></template>
+<template>
+  <div class="layout">
+    <Nav />
+    <main>
+      <slot />
+    </main>
+  </div>
+</template>
+
+<script>
+import Nav from "@/components/Nav";
+export default {
+  components: { Nav },
+};
+</script>
 
 <style>
 </style>
