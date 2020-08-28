@@ -3,6 +3,12 @@
 
 import DefaultLayout from "~/layouts/Default.vue";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faAlignRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+library.add(faAlignRight);
+
 export default function(Vue, { router, head, isClient }) {
   head.link.push({
     rel: "stylesheet",
@@ -12,4 +18,5 @@ export default function(Vue, { router, head, isClient }) {
 
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
+  Vue.component("font-awesome-icon", FontAwesomeIcon);
 }
