@@ -3,6 +3,8 @@
 
 import DefaultLayout from "~/layouts/Default.vue";
 
+import VueScrollTo from "vue-scrollto";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faAlignRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -19,4 +21,6 @@ export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
   Vue.component("font-awesome-icon", FontAwesomeIcon);
+
+  Vue.use(VueScrollTo);
 }

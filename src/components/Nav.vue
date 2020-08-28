@@ -1,5 +1,5 @@
 <template>
-  <nav :class="{show}">
+  <nav :class="{ show }">
     <div>
       <button @click="show = !show" class="navbar-icon">
         <font-awesome-icon icon="align-right" />
@@ -31,8 +31,9 @@ export default {
   },
 
   methods: {
-    clickLink() {
+    clickLink(el) {
       this.show = false;
+      this.$scrollTo(el);
     },
   },
 };
@@ -74,7 +75,9 @@ hr {
   padding: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
+  font-style: italic;
   font-family: "Roboto", sans-serif;
+
   color: #fc5130;
 }
 .nav-item:hover {
@@ -84,8 +87,8 @@ hr {
   opacity: 0.5;
 }
 .nav-items:hover .nav-item:hover {
-  font-style: italic;
   opacity: 1;
+  font-style: normal;
 }
 .slide-enter,
 .slide-leave-active {
