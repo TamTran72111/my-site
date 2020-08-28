@@ -6,10 +6,11 @@ import DefaultLayout from "~/layouts/Default.vue";
 import VueScrollTo from "vue-scrollto";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faAlignRight } from "@fortawesome/free-solid-svg-icons";
+import { faAlignRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faAlignRight);
+library.add(faAlignRight, faEnvelope, faGithub, faLinkedin);
 
 export default function(Vue, { router, head, isClient }) {
   head.link.push({

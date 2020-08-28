@@ -60,6 +60,7 @@ hr {
 }
 .navbar-icon {
   margin-top: 0.4rem;
+  margin-right: 0.4rem;
   font-size: 1.5rem;
   float: right;
 }
