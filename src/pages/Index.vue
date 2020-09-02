@@ -1,8 +1,11 @@
 <template>
   <Layout>
     <About />
+    <hr />
     <Skills />
+    <hr />
     <Experience />
+    <hr />
     <Education />
   </Layout>
 </template>
@@ -24,4 +27,7 @@ export default {
 </script>
 
 <style>
+hr {
+  margin: 0;
+}
 </style>

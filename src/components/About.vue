@@ -1,7 +1,9 @@
 <template>
   <section id="about">
-    <div class="image-wrapper">
-      <g-image class="image" src="../assets/images/photo.jpg" />
+    <div class="image-border">
+      <div class="image-wrapper">
+        <g-image class="image" src="../assets/images/photo.jpg" />
+      </div>
     </div>
     <div class="info">
       <h3 class="name">
@@ -53,11 +55,6 @@ export default {
 </script>
 
 <style scoped>
-section#about {
-  padding: 3.5rem 1.5rem;
-  min-height: 300px;
-}
-
 image {
   width: 50%;
 }
@@ -66,7 +63,6 @@ image {
   height: 200px;
   margin: 0 auto;
   border-radius: 50%;
-  /* background: red; */
   overflow: hidden;
 }
 .image {
@@ -74,7 +70,14 @@ image {
   object-position: center center;
   width: 100%;
 }
-
+.image-border {
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  padding: 5px;
+  background: #59c5f3;
+  border-radius: 50%;
+}
 .info {
   margin: 0 auto;
   padding: 0 2rem;
@@ -98,10 +101,9 @@ image {
   justify-content: space-around;
 }
 a.social-link {
-  /* color: #2caeba; */
   color: #102a42;
 }
 a.social-link:hover {
-  color: #e0fcff;
+  color: #59c5f3;
 }
 </style>

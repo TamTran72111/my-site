@@ -44,11 +44,14 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 3rem;
+  height: 3.5rem;
   z-index: 200;
   background: transparent;
   display: flex;
   flex-direction: column;
+}
+.navbar-icon:hover {
+  color: #59c5f3;
 }
 .show {
   background: lightgrey;

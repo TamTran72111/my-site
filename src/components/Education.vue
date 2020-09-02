@@ -50,10 +50,6 @@ export default {
   font-weight: 700;
   margin: 0;
 }
-.time {
-  color: #868e96;
-}
-.time,
 .gpa {
   font-size: 0.75rem;
   text-align: right;
@@ -71,5 +67,6 @@ export default {
 }
 .degree {
   font-family: "Roboto" sans-serif;
+  /* color: #242038; */
 }
 </style>
