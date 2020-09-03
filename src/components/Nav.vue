@@ -29,11 +29,19 @@ export default {
       show: false,
     };
   },
-
+  created() {
+    if (this.$route.hash !== "") {
+      this.clickLink(this.$route.hash);
+    }
+  },
   methods: {
     clickLink(el) {
-      this.show = false;
-      this.$scrollTo(el);
+      if (this.$route.path !== "/") {
+        this.$router.push("/" + el);
+      } else {
+        this.show = false;
+        this.$scrollTo(el);
+      }
     },
   },
 };
