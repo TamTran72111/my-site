@@ -51,5 +51,12 @@ header a:hover {
   header h1 {
     font-size: 4.5rem;
   }
+  header {
+    margin-top: 5rem;
+    height: calc(100vh - 5rem);
+  }
+  nav {
+    background: #f7f7f7;
+  }
 }
 </style>
