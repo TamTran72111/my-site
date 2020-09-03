@@ -1,16 +1,18 @@
 <template>
   <section id="education">
-    <h4 class="section-title">Education</h4>
-    <div class="education-list">
-      <div v-for="(school, idx) in schools" :key="idx" class="education-item">
-        <div class="school-time">
-          <h5 class="school">{{school.name}}</h5>
-          <div class="time">{{school.time}}</div>
-        </div>
-        <div class="detail">
-          <!-- <span class="major">{{school.major}} - {{school.degree}}</span> -->
-          <span class="degree">{{school.degree}}</span>
-          <span class="gpa">GPA: {{school.gpa}}</span>
+    <div>
+      <h4 class="section-title">Education</h4>
+      <div class="education-list">
+        <div v-for="(school, idx) in schools" :key="idx" class="education-item">
+          <div class="school-time">
+            <h5 class="school">{{school.name}}</h5>
+            <div class="time">{{school.time}}</div>
+          </div>
+          <div class="detail">
+            <!-- <span class="major">{{school.major}} - {{school.degree}}</span> -->
+            <span class="degree">{{school.degree}}</span>
+            <span class="gpa">GPA: {{school.gpa}}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -41,6 +43,9 @@ export default {
 </script>
 
 <style scoped>
+#education > div {
+  width: 100%;
+}
 .education-item {
   padding: 0.3rem;
   margin: 1.2rem auto;
@@ -54,10 +59,6 @@ export default {
   font-size: 0.75rem;
   text-align: right;
 }
-.detail {
-  padding: 0;
-  font-size: 0.9rem;
-}
 .detail span {
   display: block;
   padding: 0.1rem 0;
@@ -68,5 +69,13 @@ export default {
 .degree {
   font-family: "Roboto" sans-serif;
   /* color: #242038; */
+}
+@media screen and (min-width: 768px) {
+  .school {
+    font-size: 1.7rem;
+  }
+  .gpa {
+    font-size: 1rem;
+  }
 }
 </style>

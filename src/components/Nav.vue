@@ -7,7 +7,7 @@
     </div>
     <hr v-if="show" />
     <transition name="slide">
-      <ul v-if="show" class="nav-items">
+      <ul v-show="show" class="nav-items">
         <li class="nav-item" v-for="link in links" :key="link.text">
           <a @click="clickLink(link.link)" class="nav-link">{{ link.text }}</a>
         </li>
@@ -102,5 +102,24 @@ hr {
 .slide-enter-active,
 .slide-leave-active {
   transition: all 1s linear;
+}
+
+@media screen and (min-width: 768px) {
+  nav > div:first-child {
+    display: none;
+  }
+  nav .nav-items {
+    display: flex !important;
+    justify-content: flex-end;
+    background: transparent;
+    margin-right: 2rem;
+    margin-top: 1.2rem;
+  }
+  nav .nav-item {
+    color: #59c5f3;
+  }
+  nav .nav-item:hover {
+    background: transparent;
+  }
 }
 </style>

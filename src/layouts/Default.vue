@@ -37,4 +37,34 @@ h4.section-title {
 .degree {
   color: #617d98;
 }
+.detail {
+  font-size: 0.9rem;
+  padding: 0;
+}
+@media only screen and (min-width: 600px) {
+  section {
+    padding: 3rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section {
+    width: calc(650px + 10vw);
+    max-width: 800px;
+    margin: auto;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  h4.section-title {
+    font-size: 4.5rem;
+    margin: 4.5rem;
+  }
+  .time {
+    font-size: 1rem;
+  }
+  .detail {
+    font-size: 1.25rem;
+  }
+}
 </style>

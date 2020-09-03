@@ -1,25 +1,27 @@
 <template>
   <section id="experience">
-    <h4 class="section-title">Experience</h4>
-    <div class="experience-list">
-      <div v-for="(exp, idx) in experience" :key="idx" class="experience-item">
-        <div class="company-time">
-          <h5 class="position">{{exp.position}}</h5>
-          <div class="time">{{exp.time}}</div>
-          <h5 class="company">{{exp.company}}</h5>
-        </div>
-        <div class="detail">
-          <div class="description">
-            <div
-              v-for="(description, idx) in exp.description"
-              :key="idx"
-            >&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;{{description}}</div>
+    <div>
+      <h4 class="section-title">Experience</h4>
+      <div class="experience-list">
+        <div v-for="(exp, idx) in experience" :key="idx" class="experience-item">
+          <div class="company-time">
+            <h5 class="position">{{exp.position}}</h5>
+            <div class="time">{{exp.time}}</div>
+            <h5 class="company">{{exp.company}}</h5>
           </div>
-          <div class="achievement">
-            <div
-              v-for="(achievement, idx) in exp.achievement"
-              :key="idx"
-            >&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;{{achievement}}</div>
+          <div class="detail">
+            <div class="description">
+              <div
+                v-for="(description, idx) in exp.description"
+                :key="idx"
+              >&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;{{description}}</div>
+            </div>
+            <div class="achievement">
+              <div
+                v-for="(achievement, idx) in exp.achievement"
+                :key="idx"
+              >&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;{{achievement}}</div>
+            </div>
           </div>
         </div>
       </div>
@@ -72,13 +74,21 @@ export default {
 }
 
 .detail {
-  padding: 0;
-  font-size: 0.8rem;
   padding: 0.25rem 0.4rem 0.25rem 0.8rem;
 }
 
 .description {
   font-family: "Roboto" sans-serif;
   color: #242038;
+}
+
+@media screen and (min-width: 768px) {
+  .position {
+    font-size: 1.7rem;
+  }
+
+  .company {
+    font-size: 1.2rem;
+  }
 }
 </style>

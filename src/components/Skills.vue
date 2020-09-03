@@ -1,15 +1,17 @@
 <template>
   <section id="skills">
-    <h4 class="section-title">Skills</h4>
-    <span class="skill" v-for="(skill, idx) in skills" :key="idx">{{skill}}</span>
-    <!-- <span class="skill">Problem solving</span> -->
     <div>
-      <h5>Languages</h5>
-      <span class="skill" v-for="(language, idx) in languages" :key="idx">{{language}}</span>
-    </div>
-    <div>
-      <h5>Frameworks &amp; Libraries</h5>
-      <span class="skill" v-for="(framework, idx) in frameworks" :key="idx">{{framework}}</span>
+      <h4 class="section-title">Skills</h4>
+      <span class="skill" v-for="(skill, idx) in skills" :key="idx">{{skill}}</span>
+      <!-- <span class="skill">Problem solving</span> -->
+      <div>
+        <h5>Languages</h5>
+        <span class="skill" v-for="(language, idx) in languages" :key="idx">{{language}}</span>
+      </div>
+      <div>
+        <h5>Frameworks &amp; Libraries</h5>
+        <span class="skill" v-for="(framework, idx) in frameworks" :key="idx">{{framework}}</span>
+      </div>
     </div>
   </section>
 </template>
@@ -69,5 +71,14 @@ h5 {
   border-radius: 0.25rem;
   letter-spacing: 1px;
   font-size: 0.85rem;
+}
+@media screen and (min-width: 768px) {
+  h5 {
+    font-size: 1.9rem;
+  }
+  .skill {
+    margin: 0.35rem 0.75rem 0.25rem 0;
+    font-size: 1.2rem;
+  }
 }
 </style>
