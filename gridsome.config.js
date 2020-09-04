@@ -7,4 +7,5 @@
 module.exports = {
   siteName: "Tam Tran",
   plugins: [],
+  siteUrl: "https://tamtran72111.github.io",
 };
