@@ -77,7 +77,8 @@ export default {
   padding: 0.25rem 0.4rem 0.25rem 0.8rem;
 }
 
-.description {
+.description,
+.achievement {
   font-family: "Roboto" sans-serif;
   color: #242038;
 }
